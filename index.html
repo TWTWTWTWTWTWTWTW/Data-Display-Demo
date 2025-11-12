@@ -1,58 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CoT for AIME24 Problems</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Limit of RLVR</title>
+
+  <!-- Bulma & Fonts -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./static/css/index.css">
 </head>
+
 <body>
-  <div class="container">
-    <h1>CoT for AIME24 Problems</h1>
+  <!-- Hero Section -->
+  <section class="hero is-light is-fullheight-with-navbar">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title">The Limit of RL Fine-Tuning on Reasoning LMs</h1>
+        <h2 class="subtitle">Reinforcement Learning Enhances Sampling Efficiency Without Expanding Reasoning Capacity</h2>
 
-    <!-- Tabs -->
-    <div class="tabs">
-      <button class="tab active" data-target="q3">Question 3</button>
-      <button class="tab" data-target="q14">Question 14</button>
-      <button class="tab" data-target="q29">Question 29</button>
-      <button class="tab" data-target="q30">Question 30</button>
-    </div>
+        <div class="video-wrapper">
+          <video autoplay loop muted playsinline>
+            <source src="./static/video/introvideo.mp4" type="video/mp4">
+          </video>
+        </div>
 
-    <!-- Tab Contents -->
-    <div class="tab-content">
-      <div id="q3" class="content">
-        <h2>Question 3:</h2>
-        <p>Example question content here. Replace this with your own text.</p>
-        <p><strong>Model:</strong> DeepSeek-R1-Distill-Qwen-7B</p>
-        <p><strong>Temperature:</strong> 0.6</p>
-      </div>
-
-      <div id="q14" class="content" style="display:none;">
-        <h2>Question 14:</h2>
-        <p>
-          Eight circles of radius 34 are sequentially tangent, and two of the
-          circles are tangent to <em>AB</em> and <em>BC</em> of triangle <em>ABC</em>,
-          respectively. 2024 circles of radius 1 can be arranged in the same manner.
-          The inradius of triangle <em>ABC</em> can be expressed as <em>m/n</em>, where
-          <em>m</em> and <em>n</em> are relatively prime positive integers. Find
-          <em>m + n</em>.
-        </p>
-        <p><strong>Model:</strong> DeepSeek-R1-Distill-Qwen-7B</p>
-        <p><strong>Temperature:</strong> 0.6</p>
-      </div>
-
-      <div id="q29" class="content" style="display:none;">
-        <h2>Question 29:</h2>
-        <p>Placeholder for question 29 content.</p>
-      </div>
-
-      <div id="q30" class="content" style="display:none;">
-        <h2>Question 30:</h2>
-        <p>Placeholder for question 30 content.</p>
+        <div class="buttons is-centered mt-5">
+          <a class="button is-dark is-rounded" href="https://arxiv.org/abs/2410.02744" target="_blank">
+            <i class="ai ai-arxiv"></i>&nbsp; Paper
+          </a>
+          <a class="button is-link is-rounded" href="https://github.com/limit-of-rlvr/limit-of-rlvr.github.io" target="_blank">
+            <i class="fab fa-github"></i>&nbsp; Code
+          </a>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <script src="script.js"></script>
+  <!-- Introduction -->
+  <section class="section">
+    <div class="container">
+      <h2 class="title is-3">Key Findings</h2>
+      <ul class="content">
+        <li><strong>Finding 1:</strong> RL fine-tuning improves sampling efficiency, not reasoning ability.</li>
+        <li><strong>Finding 2:</strong> Base models already possess intrinsic reasoning capacity.</li>
+        <li><strong>Finding 3:</strong> Scaling inference sampling achieves similar benefits without RL.</li>
+      </ul>
+      <video autoplay loop muted playsinline class="intro-vid">
+        <source src="./static/video/overviewvideo.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- Q&A Section -->
+  <section class="section has-background-light">
+    <div class="container">
+      <h2 class="title is-3">Q&A</h2>
+      <div class="columns is-multiline">
+        <div class="column is-half">
+          <div class="box qa-card">
+            <h4 class="title is-5">Q1: Does RL improve reasoning?</h4>
+            <p>No — it mainly reduces the number of samples required to reach the same reasoning accuracy.</p>
+          </div>
+        </div>
+        <div class="column is-half">
+          <div class="box qa-card">
+            <h4 class="title is-5">Q2: Why call it “Limit of RLVR”?</h4>
+            <p>Because RL fine-tuning reaches a plateau where reasoning depth does not increase further.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>© 2025 The Limit of RLVR Project</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="./static/js/index.js"></script>
 </body>
 </html>
