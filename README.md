@@ -1,6 +1,6 @@
-# Does Reinforcement Learning Really Incentivize Reasoning Capacity in LLMs Beyond the Base Model?
+# Simple implementation of SJTU data submission page
 
-This website is adapted from <a href="https://nerfies.github.io/">Nerfies</a>.
+This website is adapted from <a href="https://limit-of-rlvr.github.io/">Nerfies</a>.
 
 # Website License
 
